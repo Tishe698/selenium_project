@@ -1,6 +1,9 @@
 from selenium import webdriver
 import pytest
-from pages.base_page import BasePage
+from pages.shop_cart_page import ShopCartPage
+from pages.shop_cart_desk_page import ShopCartPageDesk
+from pages.product_page_office import ProductPageOffice
+
 
 @pytest.fixture
 def driver():
@@ -10,4 +13,16 @@ def driver():
     chrome_driver.quit()
 
 
-    
+@pytest.fixture
+def shop_cart_page(driver):
+    return ShopCartPage(driver)
+
+
+@pytest.fixture
+def shop_cart_page_desk(driver):
+    return ShopCartPageDesk(driver)
+
+
+@pytest.fixture
+def product_page_office(driver):
+    return ProductPageOffice(driver)

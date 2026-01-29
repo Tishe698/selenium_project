@@ -1,3 +1,4 @@
 from selenium.webdriver.common.by import By
 
-title_shop_cart_locator = (By.TAG_NAME, 'title')
+header_shop_cart_loc = (By.TAG_NAME, "h3")
+basket_empty_text_loc = (By.CLASS_NAME, "js_cart_lines ")
